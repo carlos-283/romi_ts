@@ -1,62 +1,96 @@
-# ROMI Reto Técnico – API REST Pacientes
+# ROMI Reto Técnico – API REST Pacientes 🚑
 
-Este proyecto implementa una API REST para gestionar pacientes.
+Una API REST para gestionar pacientes de manera sencilla y eficiente.
 
-## Permite
-    Registrar paciente
-    Consultar pacientes
-    Consultar paciente por ID.
+---
 
-## Estructura del proyecto
+## Funcionalidades
 
+* Registrar paciente
+* Consultar todos los pacientes
+* Consultar paciente por ID
+
+---
+
+## Estructura
+
+```
 ROMI_TS/
 ├── src/
-│   ├── app.ts           # App principal
-│   ├── db.ts            # Conexión a base de datos
+│   ├── app.ts             # App principal
+│   ├── db.ts              # Conexión a base de datos
 │   ├── Models/
-│   │   └── Patient.ts   # Modelo de paciente
-│   └── routes/
-│   │   └── patients.ts  # Endpoints /patients
+│   │   └── Patient.ts     # Modelo de paciente
+│   ├── routes/
+│   │   └── patients.ts    # Endpoints /patients
 │   └── Controllers/
-│       └── patients.ts  # Logica de endpoints de paciente
-├── tsconfig.json        # Configuración de TypeScript
-├── package.json         # Dependencias
-└── .env                 # Variables de entorno
+│       └── patients.ts    # Lógica de endpoints de paciente
+├── tsconfig.json          # Configuración de TypeScript
+├── package.json           # Dependencias
+└── .env                   # Variables de entorno
+```
+
+---
 
 ## Endpoints
 
-POST /patients → Registrar nuevo paciente.
+### **Registrar nuevo paciente**
 
-ejemplo de cuerpo del request 
-    
-{ "name":"Jose","age":26,"symptoms":"Dolor de cabeza"}
+`POST /patients`
 
-GET /patients → Consultar todos los pacientes.
+**Request body:**
 
-GET /patients/:id → Consultar un paciente por id.
+```json
+{
+  "name": "Jose",
+  "age": 26,
+  "symptoms": "Dolor de cabeza"
+}
+```
 
-instalacion
+---
 
-1. Clonar repositorio
+### **Consultar todos los pacientes**
 
-    git clone https://github.com/carlos-283/romi_ts.git
+`GET /patients`
 
-2. Instalar dependencias
+---
 
-    npm install
+### **Consultar paciente por ID**
 
-3. Agregar variables de entorno
+`GET /patients/:id`
 
-    Crear archivo .env en la raiz de proyecto, con las siguientes variables
+---
 
-    PORT=1234
-    MONGO_URI=mongodb+srv:
+## Instalación
 
-4. Ejecutar
+1. **Clonar el repositorio**
 
-    npm run dev :  Ejecutar proyecto con nodemon en entorno de desarrollo
-    npm run build : Poblar la carpeta dist con el codigo js del proyecto
-    npm run start : Correr codigo de la carpeta dist y usarlo en entorno productivo
+```bash
+git clone https://github.com/carlos-283/romi_ts.git
+```
 
-    El servidor correra por defecto en http://localhost:3000
+2. **Instalar dependencias**
 
+```bash
+npm install
+```
+
+3. **Configurar variables de entorno**
+
+Crear un archivo `.env` en la raíz del proyecto:
+
+```
+PORT=1234
+MONGO_URI=mongodb+srv://<tu_usuario>:<tu_password>@cluster.mongodb.net/<tu_bd>
+```
+
+4. **Ejecutar el proyecto**
+
+```bash
+npm run dev     # Ejecutar en entorno de desarrollo con nodemon
+npm run build   # Compilar TypeScript a JavaScript en /dist
+npm run start   # Ejecutar en producción desde /dist
+```
+
+> El servidor correrá por defecto en [http://localhost:3000](http://localhost:3000)
