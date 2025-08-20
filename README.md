@@ -1,13 +1,13 @@
-ROMI Reto Técnico – API REST Pacientes
+# ROMI Reto Técnico – API REST Pacientes
 
 Este proyecto implementa una API REST para gestionar pacientes.
 
-Permite:
+## Permite
     Registrar paciente
     Consultar pacientes
     Consultar paciente por ID.
 
-Estructura del proyecto
+## Estructura del proyecto
 
 ROMI_TS/
 ├── src/
@@ -23,18 +23,16 @@ ROMI_TS/
 ├── package.json         # Dependencias
 └── .env                 # Variables de entorno
 
-Endpoints
+## Endpoints
 
 POST /patients → Registrar nuevo paciente.
 
-    ejemplo de estructura del objeto
-        {
-        "name":"Jose",
-        "age":26,
-        "symptoms":"Dolor de cabeza"
-        }
+ejemplo de cuerpo del request 
+    
+{ "name":"Jose","age":26,"symptoms":"Dolor de cabeza"}
 
 GET /patients → Consultar todos los pacientes.
+
 GET /patients/:id → Consultar un paciente por id.
 
 instalacion
@@ -56,8 +54,8 @@ instalacion
 
 4. Ejecutar
 
-    npm run dev : Para ejecutar proyecto con nodemon en entorno de desarrollo
-    npm run build : Para poblar la carpeta dist con el codigo js del proyecto
+    npm run dev :  Ejecutar proyecto con nodemon en entorno de desarrollo
+    npm run build : Poblar la carpeta dist con el codigo js del proyecto
     npm run start : Correr codigo de la carpeta dist y usarlo en entorno productivo
 
     El servidor correra por defecto en http://localhost:3000
