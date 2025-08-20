@@ -1,6 +1,6 @@
-# ROMI Reto Técnico – API REST Pacientes 🚑
+# ROMI Reto Técnico – API REST Pacientes
 
-Una API REST para gestionar pacientes de manera sencilla y eficiente.
+Una API REST para gestionar pacientes de manera sencilla y eficiente, hecha con Node, TypeScript y MongoDB.
 
 ---
 
