@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express";
-import { Patient } from "../models/Patient";
+import { Patient } from "../Models/Patient";
 import mongoose from "mongoose";
 
 export const findPatients = async (req: Request, res: Response) => {
